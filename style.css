@@ -1,4 +1,9 @@
-* {
+@import url("https://fonts.googleapis.com/css2?family=Archivo+Black&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Syne:wght@400;700;800&display=swap");
+
+*,
+*::after,
+*::before {
   padding: 0;
   margin: 0;
 }
@@ -20,8 +25,88 @@ header {
   width: inherit;
   height: inherit;
   display: grid;
-  grid-template-rows: auto 1fr;
-  background-color: rgba(187, 111, 88, 0.4);
+  grid-template-rows: auto auto 1fr;
+  background-color: rgba(0, 77, 115, 0.4);
+}
+
+.navbar {
+  position: relative;
+  background-color: #fff;
+}
+
+.navbar-collapse {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  right: 0;
+  padding: 0 11px;
+  background-color: white;
+}
+
+.navbar-light .navbar-toggler {
+  border: none;
+}
+
+.navbar-toggler:focus {
+  box-shadow: none !important;
+}
+
+.nav-item .dropdown-menu {
+  border: none;
+  border-left: 2px solid salmon;
+  border-radius: 0;
+  padding: 10px 3px;
+}
+
+.dropdown:hover > .dropdown-menu {
+  display: block;
+  margin-top: 0.125em;
+}
+
+.dropdown:hover > .dropdown-menu,
+.dropend:hover > .dropdown-menu {
+  display: block;
+  margin-top: 0.125em;
+  margin-left: 0.125em;
+}
+
+button[aria-expanded="true"] > span.close {
+  display: inline;
+  opacity: 1;
+}
+
+button[aria-expanded="true"] > span.navbar-toggler-icon {
+  display: none;
+}
+
+button[aria-expanded="false"] > span.close {
+  display: none;
+}
+
+.info-in-mobile {
+  background-color: coral;
+  padding: 10px 0;
+}
+
+.info-in-mobile .phone-email {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.info-in-mobile .phone-email a {
+  color: black;
+  text-decoration: none;
+}
+
+.info-in-mobile .social-icons {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+}
+
+.info-in-mobile .social-icons a i {
+  color: black;
 }
 
 .center {
@@ -29,4 +114,35 @@ header {
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  gap: 30px;
 }
+
+.center div h1 {
+  font-size: 38px;
+  letter-spacing: 4px;
+  font-family: "Syne", sans-serif;
+  font-weight: 800;
+  color: white;
+}
+
+.buttons {
+  display: flex;
+  gap: 15px;
+}
+
+.buttons button {
+  border: none;
+  padding: 8px 20px;
+  border-radius: 10px;
+}
+
+@media screen and (min-width: 769px) {
+    .info-in-mobile {
+      display: none;
+    }
+    .dropend:hover > .dropdown-menu {
+      position: absolute;
+      top: 0;
+      left: 100%;
+    }
+  }
