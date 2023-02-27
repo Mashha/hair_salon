@@ -136,13 +136,65 @@ button[aria-expanded="false"] > span.close {
   border-radius: 10px;
 }
 
+/* main */
+main {
+  margin-top: 50px;
+}
+
+.services h1,
+h3,
+p {
+  text-align: center;
+}
+
+.services h3 {
+  margin: 10px 0;
+}
+
+.services h1 {
+  margin: 50px;
+}
+
+.services .services-inner {
+  width: 90%;
+  margin: auto;
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 30px;
+}
+
+.services .services-inner .service {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.services .services-inner .service img {
+  max-width: 350px;
+}
+
+.services .services-inner .service button {
+  border: none;
+  border-radius: 5px;
+  padding: 8px 24px;
+  margin-top: -20px;
+  text-transform: uppercase;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.services .services-inner .service button i {
+  font-size: 10px;
+}
+
 @media screen and (min-width: 769px) {
-    .info-in-mobile {
-      display: none;
-    }
-    .dropend:hover > .dropdown-menu {
-      position: absolute;
-      top: 0;
-      left: 100%;
-    }
+  .info-in-mobile {
+    display: none;
   }
+  .dropend:hover > .dropdown-menu {
+    position: absolute;
+    top: 0;
+    left: 100%;
+  }
+}
