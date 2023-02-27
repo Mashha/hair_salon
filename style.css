@@ -53,7 +53,7 @@ header {
 
 .nav-item .dropdown-menu {
   border: none;
-  border-left: 2px solid salmon;
+  border-left: 2px solid #007296;
   border-radius: 0;
   padding: 10px 3px;
 }
@@ -84,7 +84,7 @@ button[aria-expanded="false"] > span.close {
 }
 
 .info-in-mobile {
-  background-color: coral;
+  background-color: #007296;
   padding: 10px 0;
 }
 
@@ -143,6 +143,8 @@ main {
   margin: auto;
 }
 
+/* services */
+
 .services h1,
 h3,
 p {
@@ -188,6 +190,8 @@ p {
   font-size: 10px;
 }
 
+/* why us */
+
 .why-choose-us {
   text-align: center;
   margin-top: 50px;
@@ -230,6 +234,70 @@ p {
 .why-choose-us .why-us-inner .bottom img {
   width: 100%;
   height: 100%;
+}
+
+/* about me */
+.about-me {
+  margin-top: 50px;
+  text-align: center;
+}
+
+.about-me h1 {
+  margin: 50px 0;
+}
+
+.about-me .about-me-inner {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 20px;
+}
+
+.about-me .about-me-inner .image-section img {
+  width: 100%;
+}
+
+footer {
+  background-color: #007296;
+}
+
+footer p {
+  margin: 0;
+}
+
+footer .footer-inner {
+  width: 90%;
+  margin: auto;
+  padding: 30px 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+  text-align: center;
+  color: #fff;
+}
+
+footer .footer-inner .contact-info {
+  font-size: 14px;
+}
+
+footer .footer-inner .contact-info .phone a,
+.email a {
+  text-decoration: none;
+  color: #fff;
+}
+
+footer .footer-inner .social-media {
+  display: flex;
+  gap: 10px;
+}
+
+footer .credit {
+  text-align: center;
+  color: #979591;
+}
+
+footer .footer-inner .social-media a {
+  color: grey;
 }
 
 @media screen and (min-width: 769px) {
