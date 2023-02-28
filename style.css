@@ -238,7 +238,7 @@ p {
 
 /* about me */
 .about-me {
-  margin-top: 50px;
+  margin: 50px 0;
   text-align: center;
 }
 
@@ -250,6 +250,28 @@ p {
   display: grid;
   grid-template-columns: 1fr;
   gap: 20px;
+  grid-template-rows: repeat(3, 1fr);
+}
+
+.about-me .about-me-inner .image-section {
+  margin: 40px;
+  grid-row: 1/3;
+  grid-column: 1;
+  z-index: 10;
+}
+.about-me .about-me-inner .text-section {
+  background-color: #007296;
+  grid-row: 2/4;
+  grid-column: 1;
+  display: grid;
+  grid-template-rows: 1fr 1fr;
+}
+.about-me .about-me-inner .text-section .text-inner {
+  grid-row: 2/3;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
 }
 
 .about-me .about-me-inner .image-section img {
@@ -308,5 +330,91 @@ footer .footer-inner .social-media a {
     position: absolute;
     top: 0;
     left: 100%;
+  }
+
+  .navbar-collapse {
+    position: relative;
+    justify-content: flex-end;
+  }
+
+  .navbar-nav {
+    gap: 10px;
+  }
+
+  .hero-section {
+    grid-template-rows: auto 1fr;
+  }
+
+  .center {
+    width: 90%;
+    margin: auto;
+  }
+
+  .center div {
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .services .services-inner {
+    grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+  }
+
+  .why-choose-us .why-us-inner .bottom {
+    grid-gap: 40px;
+  }
+
+  .about-me .about-me-inner {
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: none;
+  }
+
+  .about-me .about-me-inner .image-section {
+    margin: 40px 20px;
+    grid-column: 1/3;
+    grid-row: 1;
+    z-index: 10;
+  }
+
+  .about-me .about-me-inner .text-section {
+    padding: 10px;
+    background-color: #007296;
+    grid-row: 1;
+    grid-column: 2/-1;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: none;
+  }
+
+  .about-me .about-me-inner .text-section .text-inner {
+    grid-column: 2/-1;
+    grid-row: 1;
+  }
+
+  footer .footer-inner {
+    flex-direction: row;
+    justify-content: space-between;
+  }
+}
+
+@media (min-width: 1000px) {
+  .why-choose-us .why-us-inner .bottom {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-areas:
+      "one two four six"
+      "one three five six";
+    gap: 10px;
+  }
+
+  .center div h1 {
+    font-size: 60px;
+  }
+}
+
+@media (min-width: 1600px) {
+  .center div h1 {
+    font-size: 70px;
   }
 }
