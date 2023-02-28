@@ -1,3 +1,4 @@
+
 @import url("https://fonts.googleapis.com/css2?family=Archivo+Black&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Syne:wght@400;700;800&display=swap");
 
@@ -6,6 +7,10 @@
 *::before {
   padding: 0;
   margin: 0;
+}
+
+:root {
+  --primary-color: #74546C;
 }
 
 html {
@@ -30,7 +35,7 @@ header {
   height: inherit;
   display: grid;
   grid-template-rows: auto auto 1fr;
-  background-color: rgba(0, 77, 115, 0.4);
+  background-color: rgba(4, 161, 103, 0.2);
 }
 
 .navbar {
@@ -163,6 +168,9 @@ p {
 .services h1 {
   margin: 50px;
   position: relative;
+  font-family: "Archivo", sans-serif;
+  font-weight: 800;
+  letter-spacing: 2px;
 }
 
 .services h1::after {
@@ -217,6 +225,9 @@ p {
 .why-choose-us h1 {
   margin-bottom: 50px;
   position: relative;
+  font-family: "Archivo", sans-serif;
+  font-weight: 800;
+  letter-spacing: 2px;
 }
 
 .why-choose-us h1::after {
@@ -282,6 +293,9 @@ p {
 .testimonials h1 {
   text-align: center;
   position: relative;
+  font-family: "Archivo", sans-serif;
+  font-weight: 800;
+  letter-spacing: 2px;
 }
 
 .testimonials h1:after {
@@ -358,6 +372,9 @@ p {
 
 .about-me h1 {
   position: relative;
+  font-family: "Archivo", sans-serif;
+  font-weight: 800;
+  letter-spacing: 2px;
 }
 
 .about-me h1:after {
