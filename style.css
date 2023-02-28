@@ -162,6 +162,19 @@ p {
 
 .services h1 {
   margin: 50px;
+  position: relative;
+}
+
+.services h1::after {
+  content: "";
+  width: 80px;
+  position: absolute;
+  height: 4px;
+  bottom: -5px;
+  background-color: #007296;
+  left: 0;
+  right: 0;
+  margin: 0 auto;
 }
 
 .services .services-inner {
@@ -203,6 +216,19 @@ p {
 }
 .why-choose-us h1 {
   margin-bottom: 50px;
+  position: relative;
+}
+
+.why-choose-us h1::after {
+  content: "";
+  height: 4px;
+  width: 80px;
+  background-color: #007296;
+  position: absolute;
+  bottom: -10px;
+  left: 0;
+  right: 0;
+  margin: 0 auto;
 }
 
 .why-choose-us .why-us-inner {
@@ -255,6 +281,19 @@ p {
 }
 .testimonials h1 {
   text-align: center;
+  position: relative;
+}
+
+.testimonials h1:after {
+    content: "";
+    height: 4px;
+    width: 80px;
+    background-color: #007296;
+    position: absolute;
+    bottom: -10px;
+    left: 0;
+    right: 0;
+    margin: 0 auto;
 }
 
 .testimonials-inner {
@@ -264,7 +303,7 @@ p {
 }
 
 .block {
-  background-color: #979591;
+  background-color: #edeff1;
   padding: 15px;
   margin: 50px 15px;
   box-shadow: 0 5px 30px -5px rgba(0, 0, 0, 0.15);
@@ -306,10 +345,31 @@ p {
   background-color: #007296;
 }
 
+.content {
+  width: 90%;
+  margin: auto;
+}
+
 /* about me */
 .about-me {
   margin: 50px 0;
   text-align: center;
+}
+
+.about-me h1 {
+  position: relative;
+}
+
+.about-me h1:after {
+  content: "";
+    height: 4px;
+    width: 80px;
+    background-color: #007296;
+    position: absolute;
+    bottom: -10px;
+    left: 0;
+    right: 0;
+    margin: 0 auto;
 }
 
 .about-me .about-me-inner {
