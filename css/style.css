@@ -154,6 +154,11 @@ nav.fixed-top {
   border-radius: 10px;
 }
 
+.buttons button a {
+  text-decoration: none;
+  color: #74546C;
+}
+
 /* main */
 main {
   display: grid;
