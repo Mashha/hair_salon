@@ -38,7 +38,6 @@ header {
 }
 
 .navbar {
-  position: relative;
   background-color: #fff;
 }
 
@@ -49,6 +48,10 @@ header {
   right: 0;
   padding: 0 11px;
   background-color: white;
+}
+
+nav.fixed-top {
+  top: 92px;
 }
 
 .navbar-light .navbar-toggler {
@@ -94,6 +97,9 @@ button[aria-expanded="false"] > span.close {
 .info-in-mobile {
   background-color: #007296;
   padding: 10px 0;
+  position: fixed;
+  top: 0;
+  width: 100%;
 }
 
 .info-in-mobile .phone-email {
@@ -123,6 +129,7 @@ button[aria-expanded="false"] > span.close {
   justify-content: center;
   align-items: center;
   gap: 30px;
+  grid-row: 3;
 }
 
 .title h1 {
@@ -151,9 +158,11 @@ main .main-inner {
 
 main .main-inner .div-contact {
   display: flex;
-  justify-content: space-between;
+  flex-direction: column;
+  gap: 20px;
   align-items: center;
   padding: 30px 0;
+  text-align: center;
 }
 main .main-inner .div-contact .inner-data p {
   margin: 0;
@@ -213,4 +222,50 @@ footer .credit {
 
 footer .footer-inner .social-media a {
   color: grey;
+}
+
+@media screen and (min-width: 769px) {
+  .info-in-mobile {
+    display: none;
+  }
+
+  nav.fixed-top {
+    position: relative;
+    top: 0;
+  }
+
+  .dropend:hover > .dropdown-menu {
+    position: absolute;
+    top: 0;
+    left: 100%;
+  }
+
+  .navbar-collapse {
+    position: relative;
+    justify-content: flex-end;
+  }
+
+  .navbar-nav {
+    gap: 10px;
+  }
+
+  .hero-section {
+    grid-template-rows: auto 1fr;
+  }
+
+  main .main-inner .div-contact {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: 30px 0;
+  }
+
+  footer .footer-inner {
+    flex-direction: row;
+    justify-content: space-between;
+  }
+
+  .title {
+    grid-row: 2;
+  }
 }
