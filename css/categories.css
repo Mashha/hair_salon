@@ -1,0 +1,224 @@
+
+@import url("https://fonts.googleapis.com/css2?family=Archivo+Black&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Syne:wght@400;700;800&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Source+Serif+Pro:wght@200;300;400&display=swap');
+
+*,
+*::after,
+*::before {
+  padding: 0;
+  margin: 0;
+}
+
+:root {
+  --primary-color: #74546C;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  width: 100%;
+  min-height: 100vh;
+  background-color: #F5F5EE;
+}
+
+header {
+  width: 100%;
+  min-height: 100vh;
+  background-position: center;
+  background-size: cover;
+}
+
+#photo {
+    background-image: url("https://images.unsplash.com/photo-1568602471122-7832951cc4c5?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80");
+    background-size: cover;
+    background-position: center;
+}
+
+#beard {
+        background-image: url("https://plus.unsplash.com/premium_photo-1669782051602-224c77ca121c?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80");
+        background-size: cover;
+        background-position: center;
+}
+
+.hero-section {
+  width: inherit;
+  min-height: inherit;
+  display: grid;
+  grid-template-rows: auto auto 1fr;
+  background-color: rgba(51, 80, 69, 0.4);
+}
+
+.navbar {
+  position: relative;
+  background-color: #fff;
+}
+
+.navbar-collapse {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  right: 0;
+  padding: 0 11px;
+  background-color: white;
+}
+
+.navbar-light .navbar-toggler {
+  border: none;
+}
+
+.navbar-toggler:focus {
+  box-shadow: none !important;
+}
+
+.nav-item .dropdown-menu {
+  border: none;
+  border-left: 2px solid #007296;
+  border-radius: 0;
+  padding: 10px 3px;
+}
+
+.dropdown:hover > .dropdown-menu {
+  display: block;
+  margin-top: 0.125em;
+}
+
+.dropdown:hover > .dropdown-menu,
+.dropend:hover > .dropdown-menu {
+  display: block;
+  margin-top: 0.125em;
+  margin-left: 0.125em;
+}
+
+button[aria-expanded="true"] > span.close {
+  display: inline;
+  opacity: 1;
+}
+
+button[aria-expanded="true"] > span.navbar-toggler-icon {
+  display: none;
+}
+
+button[aria-expanded="false"] > span.close {
+  display: none;
+}
+
+nav.fixed-top {
+  top: 92px;
+}
+
+.info-in-mobile {
+  background-color: #007296;
+  padding: 10px 0;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 100;
+}
+
+.info-in-mobile .phone-email {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.info-in-mobile .phone-email a {
+  color: black;
+  text-decoration: none;
+}
+
+.info-in-mobile .social-icons {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+}
+
+.info-in-mobile .social-icons a i {
+  color: black;
+}
+
+
+
+footer {
+    background-color: #007296;
+  }
+  
+  footer p {
+    margin: 0;
+  }
+  
+  footer .footer-inner {
+    width: 90%;
+    margin: auto;
+    padding: 30px 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    text-align: center;
+    color: #fff;
+  }
+  
+  footer .footer-inner .contact-info {
+    font-size: 14px;
+  }
+  
+  footer .footer-inner .contact-info .phone a,
+  .email a {
+    text-decoration: none;
+    color: #fff;
+  }
+  
+  footer .footer-inner .social-media {
+    display: flex;
+    gap: 10px;
+  }
+  
+  footer .credit {
+    text-align: center;
+    color: #979591;
+  }
+  
+  footer .footer-inner .social-media a {
+    color: grey;
+  }
+  
+  @media screen and (min-width: 769px) {
+    .info-in-mobile {
+      display: none;
+    }
+  
+    nav.fixed-top{
+      position: relative;
+      top: 0;
+    }
+  
+    .dropend:hover > .dropdown-menu {
+      position: absolute;
+      top: 0;
+      left: 100%;
+    }
+  
+    .navbar-collapse {
+      position: relative;
+      justify-content: flex-end;
+    }
+  
+    .navbar-nav {
+      gap: 10px;
+    }
+  
+    .hero-section {
+      grid-template-rows: auto 1fr;
+    }
+
+
+    
+  footer .footer-inner {
+    flex-direction: row;
+    justify-content: space-between;
+  }
+
+  }  

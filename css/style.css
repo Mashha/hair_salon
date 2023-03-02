@@ -1,6 +1,7 @@
 
 @import url("https://fonts.googleapis.com/css2?family=Archivo+Black&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Syne:wght@400;700;800&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Source+Serif+Pro:wght@200;300;400&display=swap');
 
 *,
 *::after,
@@ -20,6 +21,7 @@ html {
 body {
   width: 100%;
   min-height: 100vh;
+  background-color: #F5F5EE;
 }
 
 header {
@@ -35,7 +37,7 @@ header {
   min-height: inherit;
   display: grid;
   grid-template-rows: auto auto 1fr;
-  background-color: rgba(4, 161, 103, 0.2);
+  background-color: rgba(51, 80, 69, 0.4);
 }
 
 .navbar {
@@ -173,16 +175,21 @@ main {
 h3,
 p {
   text-align: center;
+  color: #676966;
 }
 
 .services h3 {
   margin: 10px 0;
+  font-family: 'Source Serif Pro', serif;
+  font-weight: 400;
+  color: #676966;
 }
 
 .services h1 {
   margin: 50px;
   position: relative;
   font-family: "Archivo", sans-serif;
+  color: #676966;
   font-weight: 800;
   letter-spacing: 2px;
 }
@@ -193,7 +200,7 @@ p {
   position: absolute;
   height: 4px;
   bottom: -5px;
-  background-color: #007296;
+  background-color: #E8E8DC;
   left: 0;
   right: 0;
   margin: 0 auto;
@@ -228,6 +235,10 @@ p {
 
 .services .services-inner .service button i {
   font-size: 10px;
+}
+.services .services-inner .service button a {
+  text-decoration: none;
+  color: #007296;
 }
 
 /* why us */
@@ -409,9 +420,6 @@ p {
   gap: 20px;
 }
 
-.about-me .about-me-inner .text-section {
-  background-color: #edeff1;
-}
 .about-me .about-me-inner .text-section .text-inner {
   display: flex;
   justify-content: center;
@@ -531,11 +539,37 @@ footer .footer-inner .social-media a {
     grid-column: 1/3;
     grid-row: 1;
     z-index: 10;
+    position: relative;
+    z-index: 10;
   }
+
+
+  .about-me .about-me-inner .image-section:before {
+     position: absolute;
+     content: "";
+     top: -20px;
+     left: -40px;
+     width: 90%;
+     height: 100%;
+     border: 5px solid#EDE1D1;
+     z-index: -1;
+     
+  }
+  .about-me .about-me-inner .image-section:after {
+     position: absolute;
+     content: "";
+     top: 60px;
+     left: 60px;
+     width: 100%;
+     height: 100%;
+    background-color: #D4D3CF;
+     z-index: -5;
+     
+  }
+
 
   .about-me .about-me-inner .text-section {
     padding: 10px;
-    background-color: #edeff1;
     grid-row: 1;
     grid-column: 2/-1;
     display: grid;
